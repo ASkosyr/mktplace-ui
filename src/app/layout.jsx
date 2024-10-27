@@ -23,6 +23,7 @@ import api from "utils/__api__/layout";
 import "i18n";
 import {Header} from "../components/header";
 import ShopLayout1 from "../components/layouts/shop-layout-1";
+import {Suspense} from "react";
 export default async function RootLayout({
   children,
   modal
@@ -37,7 +38,7 @@ export default async function RootLayout({
               <Header/>
               <RTL>
                 {modal}
-                <ShopLayout1 data={data}>{children}</ShopLayout1>;
+                <Suspense fallback={null}><ShopLayout1 data={data}>{children}</ShopLayout1></Suspense>
               </RTL>
             </ThemeProvider>
           </SettingsProvider>
