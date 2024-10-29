@@ -3,7 +3,7 @@ import { WishListPageView } from "pages-sections/customer-dashboard/wish-list";
 
 import { getWishListProducts } from "utils/__api__/wish-list";
 export const metadata = {
-  title: "Wish List - Bazaar Next.js E-commerce Template",
+  title: "Wish List - AI Agents Marketplace",
   description: `Bazaar is a React Next.js E-commerce template. Build SEO friendly Online store, delivery app and Multi vendor store`,
   authors: [{
     name: "UI-LIB",

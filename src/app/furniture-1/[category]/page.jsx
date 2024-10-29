@@ -4,7 +4,7 @@ import FurnitureOnePageView from "pages-sections/furniture-1/page-view";
 
 import api from "utils/__api__/furniture-1";
 export const metadata = {
-  title: "Furniture Shop - Bazaar Next.js E-commerce Template",
+  title: "Furniture Shop - AI Agents Marketplace",
   description: `Bazaar is a React Next.js E-commerce template. Build SEO friendly Online store, delivery app and Multi vendor store`,
   authors: [{
     name: "UI-LIB",

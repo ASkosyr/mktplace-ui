@@ -5,7 +5,7 @@ import { ProductSearchPageView } from "pages-sections/product-details/page-view"
 
 import { getFilters, getProducts } from "utils/__api__/product-search";
 export const metadata = {
-  title: "Product Search - Bazaar Next.js E-commerce Template",
+  title: "Product Search - AI Agents Marketplace",
   description: `Bazaar is a React Next.js E-commerce template. Build SEO friendly Online store, delivery app and Multi vendor store`,
   authors: [{
     name: "UI-LIB",

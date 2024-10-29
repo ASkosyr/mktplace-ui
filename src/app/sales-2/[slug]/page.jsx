@@ -5,7 +5,7 @@ import api from "utils/__api__/sales";
 // CUSTOM TYPES
 
 export const metadata = {
-  title: "Sales 2 - Bazaar Next.js E-commerce Template",
+  title: "Sales 2 - AI Agents Marketplace",
   description: `Bazaar is a React Next.js E-commerce template. Build SEO friendly Online store, delivery app and Multi vendor store`,
   authors: [{
     name: "UI-LIB",

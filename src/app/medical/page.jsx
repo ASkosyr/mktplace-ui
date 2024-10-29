@@ -1,6 +1,6 @@
 import MedicalPageView from "pages-sections/medical/page-view";
 export const metadata = {
-  title: "Medical - Bazaar Next.js E-commerce Template",
+  title: "Medical - AI Agents Marketplace",
   description: `Bazaar is a React Next.js E-commerce template. Build SEO friendly Online store, delivery app and Multi vendor store`,
   authors: [{
     name: "UI-LIB",

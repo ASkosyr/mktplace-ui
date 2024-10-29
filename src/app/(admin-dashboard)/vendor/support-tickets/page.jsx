@@ -4,7 +4,7 @@ import { SupportTicketsPageView } from "pages-sections/vendor-dashboard/support-
 
 import api from "utils/__api__/ticket";
 export const metadata = {
-  title: "Support Tickets - Bazaar Next.js E-commerce Template",
+  title: "Support Tickets - AI Agents Marketplace",
   description: `Bazaar is a React Next.js E-commerce template. Build SEO friendly Online store, delivery app and Multi vendor store`,
   authors: [{
     name: "UI-LIB",

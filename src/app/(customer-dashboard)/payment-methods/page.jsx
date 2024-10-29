@@ -3,7 +3,7 @@ import { PaymentMethodsPageView } from "pages-sections/customer-dashboard/paymen
 
 import api from "utils/__api__/payments";
 export const metadata = {
-  title: "Payment Methods - Bazaar Next.js E-commerce Template",
+  title: "Payment Methods - AI Agents Marketplace",
   description: `Bazaar is a React Next.js E-commerce template. Build SEO friendly Online store, delivery app and Multi vendor store`,
   authors: [{
     name: "UI-LIB",

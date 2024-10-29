@@ -6,7 +6,7 @@ import api from "utils/__api__/shop";
 
 import { ShopsPageView } from "pages-sections/shops/page-view";
 export const metadata = {
-  title: "Shops - Bazaar Next.js E-commerce Template",
+  title: "Shops - AI Agents Marketplace",
   description: `Bazaar is a React Next.js E-commerce template. Build SEO friendly Online store, delivery app and Multi vendor store`,
   authors: [{
     name: "UI-LIB",

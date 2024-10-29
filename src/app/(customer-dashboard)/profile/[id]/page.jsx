@@ -8,7 +8,7 @@ export async function generateMetadata() {
   if (!user) notFound();
   const name = `${user.name.firstName} ${user.name.lastName}`;
   return {
-    title: name + " - Bazaar Next.js E-commerce Template",
+    title: name + " - AI Agents Marketplace",
     description: "Bazaar is a React Next.js E-commerce template.",
     authors: [{
       name: "UI-LIB",

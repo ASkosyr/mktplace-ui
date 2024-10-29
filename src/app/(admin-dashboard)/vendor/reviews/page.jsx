@@ -3,7 +3,7 @@ import { ReviewsPageView } from "pages-sections/vendor-dashboard/reviews/page-vi
 
 import api from "utils/__api__/vendor";
 export const metadata = {
-  title: "Reviews - Bazaar Next.js E-commerce Template",
+  title: "Reviews - AI Agents Marketplace",
   description: `Bazaar is a React Next.js E-commerce template. Build SEO friendly Online store, delivery app and Multi vendor store`,
   authors: [{
     name: "UI-LIB",

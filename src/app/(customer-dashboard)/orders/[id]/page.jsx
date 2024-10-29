@@ -11,7 +11,7 @@ export async function generateMetadata({
   const order = await api.getOrder(params.id);
   if (!order) notFound();
   return {
-    title: order.id + " - Bazaar Next.js E-commerce Template",
+    title: order.id + " - AI Agents Marketplace",
     description: "Bazaar is a React Next.js E-commerce template.",
     authors: [{
       name: "UI-LIB",

@@ -11,7 +11,7 @@ export async function generateMetadata({
   const ticket = await api.getTicket(params.slug);
   if (!ticket) notFound();
   return {
-    title: ticket.title + " - Bazaar Next.js E-commerce Template",
+    title: ticket.title + " - AI Agents Marketplace",
     description: "Bazaar is a React Next.js E-commerce template.",
     authors: [{
       name: "UI-LIB",

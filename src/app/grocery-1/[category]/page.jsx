@@ -4,7 +4,7 @@ import GroceryOnePageView from "pages-sections/grocery-1/page-view";
 
 import api from "utils/__api__/grocery-1";
 export const metadata = {
-  title: "Grocery 1 - Bazaar Next.js E-commerce Template",
+  title: "Grocery 1 - AI Agents Marketplace",
   description: `Bazaar is a React Next.js E-commerce template. Build SEO friendly Online store, delivery app and Multi vendor store`,
   authors: [{
     name: "UI-LIB",

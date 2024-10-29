@@ -3,7 +3,7 @@ import { VendorPayoutRequestsPageView } from "pages-sections/vendor-dashboard/v-
 
 import api from "utils/__api__/vendor";
 export const metadata = {
-  title: "Payout Requests - Bazaar Next.js E-commerce Template",
+  title: "Payout Requests - AI Agents Marketplace",
   description: `Bazaar is a React Next.js E-commerce template. Build SEO friendly Online store, delivery app and Multi vendor store`,
   authors: [{
     name: "UI-LIB",

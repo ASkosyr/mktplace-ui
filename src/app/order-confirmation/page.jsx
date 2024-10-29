@@ -1,6 +1,6 @@
 import { OrderConfirmationPageView } from "pages-sections/order-confirmation";
 export const metadata = {
-  title: "Order Confirmation - Bazaar Next.js E-commerce Template",
+  title: "Order Confirmation - AI Agents Marketplace",
   description: `Bazaar is a React Next.js E-commerce template. Build SEO friendly Online store, delivery app and Multi vendor store`,
   authors: [{
     name: "UI-LIB",
