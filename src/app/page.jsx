@@ -1,10 +1,10 @@
 import FashionTwoPageView from "pages-sections/fashion-2/page-view";
 export const metadata = {
   title: "AI Agents Marketplace",
-  description: `Bazaar is a React Next.js E-commerce template. Build SEO friendly Online store, delivery app and Multi vendor store`,
+  description: `AI Agents Marketplace`,
   authors: [{
-    name: "UI-LIB",
-    url: "https://ui-lib.com"
+    name: "",
+    url: ""
   }],
   keywords: ["ai agent", "marketplace"]
 };

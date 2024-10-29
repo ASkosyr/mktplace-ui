@@ -3,14 +3,11 @@ import productDatabase from "data/product-database";
 // FILTER OPTIONS
 
 const CATEGORIES = [{
-  title: "Bath Preparations",
-  children: ["Bubble Bath", "Bath Capsules", "Others"]
+  title: "AI Agents Builder"
 }, {
-  title: "Eye Makeup Preparations"
+  title: "Coding"
 }, {
-  title: "Fragrance"
-}, {
-  title: "Hair Preparations"
+  title: "Customer Service"
 }];
 const BRANDS = [{
   label: "Mac",
@@ -58,39 +55,39 @@ export const getProducts = cache(async ({
   rating,
   category
 }) => {
-  let products = productDatabase.slice(95, 104);
+  let products = productDatabase.slice(0, 10);
 
-  if (sale) {
-    products = productDatabase.slice(0, 10);
-  }
-
-  if (prices) {
-    products = productDatabase.slice(10, 20);
-  }
-
-  if (colors) {
-    products = productDatabase.slice(20, 30);
-  }
-
-  if (brands) {
-    products = productDatabase.slice(30, 40);
-  }
-
-  if (rating) {
-    products = productDatabase.slice(40, 50);
-  }
-
-  if (q) {
-    products = productDatabase.slice(50, 60);
-  }
-
-  if (category) {
-    products = productDatabase.slice(60, 70);
-  }
-
-  if (sort) {
-    products = productDatabase.slice(70, 80);
-  }
+  // if (sale) {
+  //   products = productDatabase.slice(0, 10);
+  // }
+  //
+  // if (prices) {
+  //   products = productDatabase.slice(10, 20);
+  // }
+  //
+  // if (colors) {
+  //   products = productDatabase.slice(20, 30);
+  // }
+  //
+  // if (brands) {
+  //   products = productDatabase.slice(30, 40);
+  // }
+  //
+  // if (rating) {
+  //   products = productDatabase.slice(40, 50);
+  // }
+  //
+  // if (q) {
+  //   products = productDatabase.slice(50, 60);
+  // }
+  //
+  // if (category) {
+  //   products = productDatabase.slice(60, 70);
+  // }
+  //
+  // if (sort) {
+  //   products = productDatabase.slice(70, 80);
+  // }
 
   return {
     products,

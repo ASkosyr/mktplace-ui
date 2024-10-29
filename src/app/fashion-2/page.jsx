@@ -3,10 +3,10 @@ export const metadata = {
   title: "AI Agents Marketplace",
   description: `AI Agents Marketplace`,
   authors: [{
-    name: "UI-LIB",
-    url: "https://ui-lib.com"
+    name: "",
+    url: ""
   }],
-  keywords: ["e-commerce", "e-commerce template", "next.js", "react"]
+  keywords: ["ai agent", "marketplace", "ai agents marketplace"]
 };
 export default function FashionShopTwo() {
   return <FashionTwoPageView />;

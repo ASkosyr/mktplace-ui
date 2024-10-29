@@ -21,6 +21,6 @@ export default function ProductPrice({
 
       {discount ? <Box component="del" fontWeight={600} color="grey.600">
           {currency(price)}
-        </Box> : null}
+        </Box> : null} per 1000 calls
     </FlexBox>;
 }

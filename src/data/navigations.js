@@ -1,43 +1,43 @@
 
 // CUSTOM DATA MODEL
 export const categoryMenus = [{
-  icon: "Dress",
+  icon: "Bot",
   title: "AI Agents Builder",
   href: "/ai-agents-builder"
 }, {
-  icon: "Dress",
+  icon: "Code",
   title: "Coding",
   href: "/coding"
 }, {
-  icon: "Dress",
+  icon: "HeadphonesIcon",
   title: "Customer Service",
   href: "/customer-service"
 }, {
-  icon: "Dress",
+  icon: "UserCircle",
   title: "Personal Assistant",
   href: "/personal-assistant"
 }, {
-  icon: "Dress",
+  icon: "BarChart2",
   title: "Data Analysis",
   href: "/data-analysis"
 }, {
-  icon: "Dress",
+  icon: "Users",
   title: "Digital Workers",
   href: "/digital-workers"
 }, {
-  icon: "Dress",
+  icon: "GitBranch",
   title: "Workflow",
   href: "/workflow"
 }, {
-  icon: "Dress",
+  icon: "PenTool",
   title: "Content Creation",
   href: "/content-creation"
 }, {
-  icon: "Dress",
+  icon: "HelpCircle",
   title: "Other",
   href: "/other"
 }, {
-  icon: "Dress",
+  icon: "SearchIcon",
   title: "Research",
   href: "/research"
 }];

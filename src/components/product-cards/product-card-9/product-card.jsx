@@ -66,7 +66,9 @@ export default function ProductCard9(props) {
     off,
     rating,
     id,
-    slug
+    slug,
+    shortDescription,
+    tags
   } = props || {};
   const {
     cartItem,
@@ -123,7 +125,7 @@ export default function ProductCard9(props) {
             {
             /* PRODUCT TAG LIST */
           }
-            <ProductTags tags={["Bike", "Motor", "Ducati"]} />
+            {<ProductTags tags={tags.split(',')} />}
 
             {
             /* PRODUCT TITLE / NAME */
@@ -133,7 +135,8 @@ export default function ProductCard9(props) {
                 {title}
               </H5>
             </Link>
-
+            {shortDescription}
+            <br/>
             {
             /* PRODUCT RATING / REVIEW  */
           }
@@ -148,7 +151,7 @@ export default function ProductCard9(props) {
           {
           /* PRODUCT ADD TO CART BUTTON */
         }
-          <AddToCartButton quantity={cartItem?.qty} handleDecrement={handleDecrementQuantity} handleIncrement={handleIncrementQuantity} />
+          {/*<AddToCartButton quantity={cartItem?.qty} handleDecrement={handleDecrementQuantity} handleIncrement={handleIncrementQuantity} />*/}
         </div>
       </ContentWrapper>
     </Wrapper>;

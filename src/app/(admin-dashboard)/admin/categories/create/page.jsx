@@ -3,10 +3,10 @@ export const metadata = {
   title: "Create Category - AI Agents Marketplace",
   description: `Bazaar is a React Next.js E-commerce template. Build SEO friendly Online store, delivery app and Multi vendor store`,
   authors: [{
-    name: "UI-LIB",
-    url: "https://ui-lib.com"
+    name: "",
+    url: ""
   }],
-  keywords: ["e-commerce", "e-commerce template", "next.js", "react"]
+  keywords: ["ai agent", "marketplace", "ai agents marketplace"]
 };
 export default function CreateCategory() {
   return <CreateCategoryPageView />;

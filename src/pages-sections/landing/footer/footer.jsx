@@ -31,7 +31,7 @@ export default function Footer() {
           mx: "0.5rem",
           fontSize: "16px"
         }} />{" "}
-          & Care by &nbsp; <a href="https://ui-lib.com">UI Lib</a>
+          & Care by &nbsp; <a href="">UI Lib</a>
         </FlexBox>
 
         <FlexBox className="flex">

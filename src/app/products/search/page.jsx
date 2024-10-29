@@ -6,12 +6,12 @@ import { ProductSearchPageView } from "pages-sections/product-details/page-view"
 import { getFilters, getProducts } from "utils/__api__/product-search";
 export const metadata = {
   title: "Product Search - AI Agents Marketplace",
-  description: `Bazaar is a React Next.js E-commerce template. Build SEO friendly Online store, delivery app and Multi vendor store`,
+  description: `AI Agents Marketplace`,
   authors: [{
-    name: "UI-LIB",
-    url: "https://ui-lib.com"
+    name: "",
+    url: ""
   }],
-  keywords: ["e-commerce", "e-commerce template", "next.js", "react"]
+  keywords: ["ai agent", "marketplace", "ai agents marketplace"]
 }; 
 // ==============================================================
 

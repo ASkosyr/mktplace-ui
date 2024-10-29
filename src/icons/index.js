@@ -121,7 +121,22 @@ import TeddyBear from "./gift-shop/TeddyBear";
 import WeddingGift from "./gift-shop/WeddingGift";
 import NewYearGift from "./gift-shop/NewYearGift";
 import BirthdayCake from "./gift-shop/BirthdayCake";
-import ValentineGift from "./gift-shop/ValentineGift"; 
+import ValentineGift from "./gift-shop/ValentineGift";
+
+import {
+  UserCircle,
+  Rocket,
+  PenTool,
+  BarChart2,
+  HeadphonesIcon,
+  Code,
+  Search as SearchIcon,
+  Languages,
+  GitBranch,
+  Users,
+  Bot,
+  HelpCircle
+} from 'lucide-react';
 // health and beauty homepage icons
 
 import Powder from "./health-and-beauty/Powder";
@@ -135,6 +150,18 @@ import OxygenPump from "./health-and-beauty/OxygenPump";
 import Thermometer from "./health-and-beauty/Thermometer";
 import HealthBeauty from "./health-and-beauty/HealthBeauty";
 const appIcons = {
+  UserCircle,
+  Rocket,
+  PenTool,
+  BarChart2,
+  HeadphonesIcon,
+  Code,
+  SearchIcon,
+  Languages,
+  GitBranch,
+  Users,
+  Bot,
+  HelpCircle,
   Beer,
   Milk,
   Snack,

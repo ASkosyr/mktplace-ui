@@ -26,7 +26,7 @@ export const LayoutEndpoints = Mock => {
         mobileNavigation: {
           version1: db.mobileNavigation,
           version2: db.mobileNavigationTwo,
-          logo: "/assets/images/bazaar-black-sm.svg"
+          logo: "/assets/images/logos/logo.png"
         },
         topbar: {
           label: "HOT",

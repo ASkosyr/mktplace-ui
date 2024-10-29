@@ -95,17 +95,17 @@ export default function ProductSearchPageView({
             </FlexBox>
 
             <FlexBox alignItems="center" my="0.25rem">
-              <Paragraph color="grey.600" mr={1}>
+              {/*<Paragraph color="grey.600" mr={1}>
                 View:
-              </Paragraph>
+              </Paragraph>*/}
 
-              <IconButton onClick={() => handleChangeSearchParams("view", "grid")}>
+              {/*<IconButton onClick={() => handleChangeSearchParams("view", "grid")} styles="display:none;">
                 <Apps fontSize="small" color={view === "grid" ? "primary" : "inherit"} />
               </IconButton>
 
               <IconButton onClick={() => handleChangeSearchParams("view", "list")}>
                 <ViewList fontSize="small" color={view === "list" ? "primary" : "inherit"} />
-              </IconButton>
+              </IconButton>*/}
 
               {
               /* SHOW IN THE SMALL DEVICE */
@@ -143,11 +143,12 @@ export default function ProductSearchPageView({
           /* PRODUCT VIEW AREA */
         }
           <Grid item xl={10} md={9} xs={12}>
-            {view === "grid" ? <ProductsGridView products={products} /> : <ProductsListView products={products} />}
+            <ProductsListView products={products} />
+            {/*{view === "grid" ? <ProductsGridView products={products} /> : <ProductsListView products={products} />}*/}
 
             <FlexBetween flexWrap="wrap" mt={6}>
               <Span color="grey.600">
-                Showing {firstIndex}-{lastIndex} of {totalProducts} Products
+                Showing {firstIndex + 1}-{lastIndex + 1} of {totalProducts} Agents
               </Span>
 
               <Pagination color="primary" variant="outlined" page={+page} count={pageCount} onChange={(_, page) => handleChangeSearchParams("page", page.toString())} />

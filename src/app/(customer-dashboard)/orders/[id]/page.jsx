@@ -14,10 +14,10 @@ export async function generateMetadata({
     title: order.id + " - AI Agents Marketplace",
     description: "Bazaar is a React Next.js E-commerce template.",
     authors: [{
-      name: "UI-LIB",
-      url: "https://ui-lib.com"
+      name: "",
+      url: ""
     }],
-    keywords: ["e-commerce", "e-commerce template", "next.js", "react"]
+    keywords: ["ai agent", "marketplace", "ai agents marketplace"]
   };
 }
 export default async function OrderDetails({

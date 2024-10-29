@@ -59,7 +59,7 @@ export default function CategoryListItem(props) {
   return <Wrapper>
       <Link href={href}>
         <div className="category-dropdown-link">
-          {icon ? <IconComponent icon={icon} fontSize="small" color="inherit" /> : null}
+          {icon ? <IconComponent icon={icon} fontSize="small" color="currentColor"/> : null}
           <span className="title">{title}</span>
           {caret ? <ChevronRight fontSize="small" className="caret-icon" /> : null}
         </div>

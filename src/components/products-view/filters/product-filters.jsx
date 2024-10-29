@@ -87,7 +87,7 @@ export default function ProductFilters({
     }
       <H6 mb={2}>Price Range</H6>
 
-      <Slider min={0} max={300} size="small" value={prices} valueLabelDisplay="auto" valueLabelFormat={v => `$${v}`} onChange={(_, v) => handleChangePrice(v)} />
+      <Slider min={0} max={30} size="small" value={prices} valueLabelDisplay="auto" valueLabelFormat={v => `$${v}`} onChange={(_, v) => handleChangePrice(v)} />
       <FlexBetween>
         <TextField fullWidth size="small" type="number" placeholder="0" value={prices[0]} onChange={e => handleChangePrice([+e.target.value, prices[1]])} />
 
@@ -103,7 +103,7 @@ export default function ProductFilters({
       {
       /* BRAND VARIANT FILTER */
     }
-      <H6 mb={2}>Brands</H6>
+      {/*<H6 mb={2}>Brands</H6>
       <FormGroup>
         {BRANDS.map(({
         label,
@@ -111,19 +111,19 @@ export default function ProductFilters({
       }) => <CheckboxLabel key={value} label={label} checked={brands.includes(value)} onChange={() => handleChangeBrand(value)} />)}
       </FormGroup>
 
-      <Box component={Divider} my={3} />
+      <Box component={Divider} my={3} />*/}
 
       {
       /* SALES OPTIONS */
     }
-      <FormGroup>
+     {/* <FormGroup>
         {OTHERS.map(({
         label,
         value
       }) => <CheckboxLabel key={value} label={label} checked={sales.includes(value)} onChange={() => handleChangeSales(value)} />)}
       </FormGroup>
 
-      <Box component={Divider} my={3} />
+      <Box component={Divider} my={3} />*/}
 
       {
       /* RATINGS FILTER */
@@ -138,7 +138,7 @@ export default function ProductFilters({
       {
       /* COLORS VARIANT FILTER */
     }
-      <H6 mb={2}>Colors</H6>
+     {/* <H6 mb={2}>Colors</H6>
       <FlexBox mb={2} flexWrap="wrap" gap={1.5}>
         {COLORS.map(item => <Box key={item} bgcolor={item} onClick={() => handleChangeColor(item)} sx={{
         width: 25,
@@ -150,6 +150,6 @@ export default function ProductFilters({
         borderRadius: "50%",
         outline: colors.includes(item) ? 1 : 0
       }} />)}
-      </FlexBox>
+      </FlexBox>*/}
     </div>;
 }
