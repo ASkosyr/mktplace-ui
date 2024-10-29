@@ -9,6 +9,6 @@ import logo from "../../../../public/assets/images/bazaar-black-sm.svg";
 export default function LogoWithTitle() {
   return <FlexRowCenter flexDirection="column" gap={1.5} mb={4}>
       <Image src={logo} alt="bazaar" />
-      <H5 fontWeight={700}>Welcome To Bazaar</H5>
+      <H5 fontWeight={700}>Welcome To AI Agents Marketplace</H5>
     </FlexRowCenter>;
 }
