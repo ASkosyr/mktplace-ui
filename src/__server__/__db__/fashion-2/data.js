@@ -2,14 +2,14 @@
 // carousel data
 export const mainCarouselData = [{
   title: "Automate the routine, elevate the strategic",
-  imgUrl: "/assets/images/banners/banner-ai-1.png",
+  imgUrl: "/assets/images/banners/banner-ai-1.jpg",
   description: "Automate the routine, elevate the strategic—AI agents enable businesses to excel.",
   buttonText: "Explore Now",
   buttonLik: "#"
 }
 , {
   title: "Reduce costs, boost productivity",
-  imgUrl: "/assets/images/banners/banner-ai-2.png",
+  imgUrl: "/assets/images/banners/banner-ai-2.jpg",
   description: "Reduce costs, boost productivity, and enhance customer experiences with AI-driven solutions.",
   buttonText: "Explore Now",
   buttonLik: "#"
