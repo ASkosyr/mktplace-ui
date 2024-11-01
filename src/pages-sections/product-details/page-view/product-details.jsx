@@ -7,7 +7,9 @@ import ProductReviews from "../product-reviews";
 import AvailableShops from "../available-shops";
 import RelatedProducts from "../related-products";
 import FrequentlyBought from "../frequently-bought";
-import ProductDescription from "../product-description"; 
+import ProductDescription from "../product-description";
+import ProductAPI from "../product-reviews/product-api";
+import ServiceAPIForm from "../product-reviews/product-form";
 // CUSTOM DATA MODEL
 
 
@@ -22,7 +24,7 @@ export default function ProductDetailsPageView(props) {
       {
       /* PRODUCT DESCRIPTION AND REVIEW */
     }
-      <ProductTabs description={<ProductDescription />} reviews={<ProductReviews />} />
+      <ProductTabs description={<ProductDescription />} api={<ProductAPI />} serviceAPIForm={<ServiceAPIForm />}/>
 
       {
       /* FREQUENTLY BOUGHT PRODUCTS AREA */

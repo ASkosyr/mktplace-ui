@@ -5,7 +5,8 @@ import { Fragment, useState } from "react";
 
 import Tab from "@mui/material/Tab";
 import Tabs from "@mui/material/Tabs";
-import styled from "@mui/material/styles/styled"; 
+import styled from "@mui/material/styles/styled";
+import ServiceAPIForm from "./product-reviews/product-form";
 // STYLED COMPONENT
 
 const StyledTabs = styled(Tabs)(({
@@ -26,8 +27,9 @@ const StyledTabs = styled(Tabs)(({
 
 // ==============================================================
 export default function ProductTabs({
-  reviews,
-  description
+  api,
+  description,
+  serviceAPIForm
 }) {
   const [selectedOption, setSelectedOption] = useState(0);
 
@@ -36,12 +38,16 @@ export default function ProductTabs({
   return <Fragment>
       <StyledTabs textColor="primary" value={selectedOption} indicatorColor="primary" onChange={handleChangeTab}>
         <Tab className="inner-tab" label="Description" />
+        <Tab className="inner-tab" label="API documentation" />
+        <Tab className="inner-tab" label="Try it out" />
         {/*<Tab className="inner-tab" label="Review (3)" />*/}
       </StyledTabs>
 
       <div className="mb-3">
         {selectedOption === 0 && description}
-        {selectedOption === 1 && reviews}
+        {selectedOption === 1 && api}
+        {selectedOption === 2 && serviceAPIForm}
+        {/*{selectedOption === 3 && <ProductReviews />}*/}
       </div>
     </Fragment>;
 }
