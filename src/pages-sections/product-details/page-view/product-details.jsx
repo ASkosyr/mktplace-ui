@@ -23,8 +23,10 @@ export default function ProductDetailsPageView(props) {
 
       {
       /* PRODUCT DESCRIPTION AND REVIEW */
+
     }
-      <ProductTabs description={<ProductDescription />} api={<ProductAPI />} serviceAPIForm={<ServiceAPIForm />}/>
+
+      <ProductTabs product={props.product} />
 
       {
       /* FREQUENTLY BOUGHT PRODUCTS AREA */

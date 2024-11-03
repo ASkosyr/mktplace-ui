@@ -37,24 +37,24 @@ export const StyledRoot = styled("div")(({
 export const ProductImageWrapper = styled("div")(({
   theme
 }) => ({
-  height: 400,
+  height: 100,
   display: "flex",
   overflow: "hidden",
   position: "relative",
-  justifyContent: "center",
+  justifyContent: "left",
   borderRadius: theme.spacing(3),
   marginBottom: theme.spacing(6),
   "& img": {
     objectFit: "contain"
   },
   [theme.breakpoints.down("sm")]: {
-    height: 300
+    height: 100
   },
   "& + .preview-images": {
     overflow: "auto",
     display: "flex",
     gap: theme.spacing(1),
-    justifyContent: "center"
+    justifyContent: "left"
   }
 }));
 export const PreviewImage = styled("div", {

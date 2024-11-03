@@ -1,4 +1,5 @@
-import Link from "next/link"; 
+import Link from "next/link";
+import Chip from "@mui/material/Chip";
 // MUI
 
 import Grid from "@mui/material/Grid";
@@ -16,7 +17,10 @@ import ProductVariantSelector from "./product-variant-selector";
 import { currency } from "lib"; 
 // STYLED COMPONENTS
 
-import { StyledRoot } from "./styles"; 
+import {ProductImageWrapper, StyledRoot} from "./styles";
+import Image from "next/image";
+import React from "react";
+import {ImageWrapper} from "../../fashion-3/section-13/styles";
 // CUSTOM DATA MODEL
 
 
@@ -25,18 +29,11 @@ export default function ProductIntro({
   product
 }) {
   return <StyledRoot>
-      <Grid container spacing={3} justifyContent="space-around">
-        {
-        /* IMAGE GALLERY AREA */
-      }
-        {/*<Grid item md={6} xs={12} alignItems="center">
-          <ProductGallery images={product.images} />
-        </Grid>*/}
 
-        {
-        /* PRODUCT INFO AREA */
-      }
-        <Grid item md={6} xs={12} alignItems="center">
+        <Grid item md={6} xs={12} alignItems="left">
+            <ProductImageWrapper>
+                <Image fill alt="product" src={product.thumbnail} sizes="(100px 100px)" object-left />
+            </ProductImageWrapper>
           {
           /* PRODUCT NAME */
         }
@@ -63,13 +60,15 @@ export default function ProductIntro({
         }
           {/*<ProductVariantSelector />*/}
 
+          {product.tags.split(',').map(tag => <Chip label={tag} variant="outlined"/>)}
+
           {
           /* PRICE & STOCK */
         }
           <div className="price">
             <H2 color="primary.main" mb={0.5} lineHeight="1">
               {currency(product.price)}
-            </H2>
+            </H2> per 1000 calls
 
             {/*<p>Stock Available</p>*/}
           </div>
@@ -88,7 +87,6 @@ export default function ProductIntro({
                 <strong>{product.shop.name}</strong>
               </Link>
             </p>}
-        </Grid>
       </Grid>
     </StyledRoot>;
 }

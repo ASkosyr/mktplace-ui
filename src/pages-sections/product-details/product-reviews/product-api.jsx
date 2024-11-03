@@ -14,17 +14,14 @@ import { getDateDifference } from "lib";
 
 import { ReviewRoot } from "./styles"; 
 // API FUNCTIONS
-export default async function ProductAPI() {
+export default async function ProductAPI({
+                                             product
+                                         }) {
 
   return <div>
-              <H5 mb={1}>Lead Generation API</H5>
+              <H5 mb={1}>API specification</H5>
 
-      <Paragraph color="grey.700">Path parameters</Paragraph>
-      <ul>
-          <li><strong>text</strong> - description of the lead</li>
-          <li><strong>num</strong> - number of leads to return</li>
-      </ul>
-
+      <div dangerouslySetInnerHTML={{ __html: product.api }} />
 
     </div>;
 }

@@ -3,6 +3,7 @@ import axios from "utils/axiosInstance";
 // CUSTOM DATA MODEL
 
 
+
 // get all product slug
 const getSlugs = cache(async () => {
   const response = await axios.get("/api/products/slug-list");
@@ -11,11 +12,8 @@ const getSlugs = cache(async () => {
 // get product based on slug
 
 const getProduct = cache(async slug => {
-  const response = await axios.get("/api/products/slug", {
-    params: {
-      slug
-    }
-  });
+  const response = await axios.get('http://gateway:3000/agents/' + slug);
+
   return response.data;
 }); 
 // search products
