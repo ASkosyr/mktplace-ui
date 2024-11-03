@@ -38,7 +38,8 @@ export default function ServiceAPIForm({
 
     const loadData = async () => {
         console.log('Loading data...');
-        const imageSrc = await fetchImage('http://localhost:8081/execute/' + product.serviceName + '/action');
+        // const imageSrc = await fetchImage('http://localhost:8081/execute/' + product.serviceName + '/action');
+        const imageSrc = await fetchImage('https://agents-test-158714562778.us-central1.run.app/action');
         console.log(imageSrc);
         setData(imageSrc);
     }

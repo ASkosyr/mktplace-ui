@@ -12,7 +12,9 @@ const getSlugs = cache(async () => {
 // get product based on slug
 
 const getProduct = cache(async slug => {
-  const response = await axios.get('http://gateway:3000/agents/' + slug);
+  //const response = await axios.get('http://gateway:3000/agents/' + slug);
+  const response = await axios.get('https://agents-service-158714562778.us-central1.run.app/agents/' + slug);
+
 
   return response.data;
 }); 
