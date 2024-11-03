@@ -32,7 +32,7 @@ export default function ProductIntro({
 
         <Grid item md={6} xs={12} alignItems="left">
             <ProductImageWrapper>
-                <Image fill alt="product" src={product.thumbnail} sizes="(100px 100px)" object-left />
+                <Image alt="product" src={product.thumbnail} sizes="(100px 100px)" class="object-left" />
             </ProductImageWrapper>
           {
           /* PRODUCT NAME */
@@ -78,15 +78,6 @@ export default function ProductIntro({
         }
           <AddToCart product={product} />
 
-          {
-          /* SHOP NAME */
-        }
-          {product.shop && <p className="shop">
-              Sold By:
-              <Link href={`/shops/${product.shop.slug}`}>
-                <strong>{product.shop.name}</strong>
-              </Link>
-            </p>}
       </Grid>
     </StyledRoot>;
 }

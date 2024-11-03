@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image"
 import { useState, useEffect } from 'react'
 import Button from "@mui/material/Button";
 import { useFormik } from "formik";
@@ -24,7 +25,10 @@ export default function ServiceAPIForm({
         try {
             const response = await fetch(url);
             const imageBytes = await response.arrayBuffer();
+            console.log("loaded image of size:", imageBytes.byteLength);
             var blob = new Blob([imageBytes], { type: "image/jpeg" });
+            //const base64String = btoa(String.fromCharCode(...new Uint8Array(blob)));
+            //const base64Image = `data:image/jpeg;base64,${base64String}`;
             var imageUrl = URL.createObjectURL(blob);
             return imageUrl;
         } catch (error) {
@@ -33,6 +37,7 @@ export default function ServiceAPIForm({
     };
 
     const loadData = async () => {
+        console.log('Loading data...');
         const imageSrc = await fetchImage('http://localhost:8081/execute/' + product.serviceName + '/action');
         console.log(imageSrc);
         setData(imageSrc);
@@ -42,13 +47,14 @@ export default function ServiceAPIForm({
             <BazaarTextField mb={1.5} name="subject" size="small" variant="outlined"
                              label="Description of the image to generate" />
 
-            <Button fullWidth mb={1.5} color="primary" variant="outlined" size="small" onClick={loadData}>
+            <Button mb={1.5} color="primary" variant="contained" onClick={loadData}>
                 Try out
             </Button>
+        <br/>
         {data && <Image
             src={data}
-            width={100}
-            height={100}
+            width={200}
+            height={200}
         />}
     </div>
 }
