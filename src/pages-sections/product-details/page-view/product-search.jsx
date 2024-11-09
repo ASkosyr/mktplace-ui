@@ -43,20 +43,16 @@ const SORT_OPTIONS = [{
 
 // ==============================================================
 export default function ProductSearchPageView({
-  filters,
-  products,
-  pageCount,
-  lastIndex,
-  firstIndex,
-  totalProducts
+  results
 }) {
   const router = useRouter();
   const pathname = usePathname();
   const searchParams = useSearchParams();
-  const query = searchParams.get("q");
+  const query = searchParams.get("term");
   const page = searchParams.get("page") || "1";
-  const view = searchParams.get("view") || "grid";
-  const sort = searchParams.get("sort") || "relevance";
+  const pageCount = Math.trunc(results.totalResults[0].total / 10);
+
+  console.log("results111:" + JSON.stringify(results));
 
   const handleChangeSearchParams = (key, value) => {
     if (!key || !value) return;
@@ -74,7 +70,7 @@ export default function ProductSearchPageView({
           {query ? <div>
               <H5 mb={0.5}>Searching for “{query}”</H5>
               <Paragraph color="grey.600">
-                {products.length} results found
+                {results.totalResults[0].total} results found
               </Paragraph>
             </div> : <div />}
 
@@ -84,7 +80,7 @@ export default function ProductSearchPageView({
                 Sort by:
               </Paragraph>
 
-              <TextField select fullWidth size="small" value={sort} variant="outlined" placeholder="Sort by" onChange={e => handleChangeSearchParams("sort", e.target.value)} sx={{
+              <TextField select fullWidth size="small" value="relevance" variant="outlined" placeholder="Sort by" onChange={e => handleChangeSearchParams("sort", e.target.value)} sx={{
               flex: "1 1 0",
               minWidth: "150px"
             }}>
@@ -95,21 +91,9 @@ export default function ProductSearchPageView({
             </FlexBox>
 
             <FlexBox alignItems="center" my="0.25rem">
-              {/*<Paragraph color="grey.600" mr={1}>
-                View:
-              </Paragraph>*/}
-
-              {/*<IconButton onClick={() => handleChangeSearchParams("view", "grid")} styles="display:none;">
-                <Apps fontSize="small" color={view === "grid" ? "primary" : "inherit"} />
-              </IconButton>
-
-              <IconButton onClick={() => handleChangeSearchParams("view", "list")}>
-                <ViewList fontSize="small" color={view === "list" ? "primary" : "inherit"} />
-              </IconButton>*/}
-
               {
-              /* SHOW IN THE SMALL DEVICE */
-            }
+                /* SHOW IN THE SMALL DEVICE */
+              }
               <Box display={{
               md: "none",
               xs: "block"
@@ -118,7 +102,7 @@ export default function ProductSearchPageView({
                       <FilterList fontSize="small" />
                     </IconButton>}>
                   <Box px={3} py={2}>
-                    <ProductFilters filters={filters} />
+                    <ProductFilters filters={results} />
                   </Box>
                 </Sidenav>
               </Box>
@@ -126,35 +110,32 @@ export default function ProductSearchPageView({
           </FlexBox>
         </FlexBetween>
 
-        <Grid container spacing={4}>
-          {
-          /* PRODUCT FILTER SIDEBAR AREA */
-        }
+        {<Grid container spacing={4}>
+
           <Grid item xl={2} md={3} sx={{
           display: {
             md: "block",
             xs: "none"
           }
         }}>
-            <ProductFilters filters={filters} />
+            <ProductFilters filters={results} />
           </Grid>
 
           {
           /* PRODUCT VIEW AREA */
         }
-          <Grid item xl={10} md={9} xs={12}>
-            <ProductsListView products={products} />
-            {/*{view === "grid" ? <ProductsGridView products={products} /> : <ProductsListView products={products} />}*/}
+          {/*{<Grid item xl={10} md={9} xs={12}>
+            <ProductsListView products={results.results} />
 
             <FlexBetween flexWrap="wrap" mt={6}>
               <Span color="grey.600">
-                Showing {firstIndex + 1}-{lastIndex + 1} of {totalProducts} Agents
+                Showing {(page - 1) * 10 + 1}-{page * 10} of {results.totalResults[0].total} Agents
               </Span>
 
               <Pagination color="primary" variant="outlined" page={+page} count={pageCount} onChange={(_, page) => handleChangeSearchParams("page", page.toString())} />
             </FlexBetween>
-          </Grid>
-        </Grid>
+          </Grid>}*/}
+        </Grid>}
       </Container>
     </div>;
 }

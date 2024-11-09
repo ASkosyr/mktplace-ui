@@ -27,7 +27,7 @@ export default function SearchInputWithCategory({
   const handleEnter = event => {
     if (event.key === "Enter" && search) {
       const params = new URLSearchParams(searchParams);
-      params.set("q", search);
+      params.set("term", search);
       router.push(`/products/search?${params.toString()}`);
       setSearch("");
     }

@@ -18,7 +18,7 @@ export default function SearchInput() {
   const handleSearch = () => {
     if (search) {
       const params = new URLSearchParams(searchParams);
-      params.set("q", search);
+      params.set("term", search);
       router.push(`/products/search?${params.toString()}`);
       setSearch("");
     }

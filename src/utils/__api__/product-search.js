@@ -1,5 +1,6 @@
 import { cache } from "react";
-import productDatabase from "data/product-database"; 
+import productDatabase from "data/product-database";
+import axios from "../axiosInstance";
 // FILTER OPTIONS
 
 const CATEGORIES = [{
@@ -45,55 +46,14 @@ export const getFilters = cache(async () => {
   };
 });
 export const getProducts = cache(async ({
-  q,
-  page,
-  sort,
-  sale,
-  prices,
-  colors,
-  brands,
-  rating,
-  category
+                                          term, category, rating, tags, page
 }) => {
-  let products = productDatabase.slice(0, 10);
+  const response = await axios.get("http://gateway:3000/agents", {
+    params: {
+      term, category, rating, tags, page
+    }
+  });
 
-  // if (sale) {
-  //   products = productDatabase.slice(0, 10);
-  // }
-  //
-  // if (prices) {
-  //   products = productDatabase.slice(10, 20);
-  // }
-  //
-  // if (colors) {
-  //   products = productDatabase.slice(20, 30);
-  // }
-  //
-  // if (brands) {
-  //   products = productDatabase.slice(30, 40);
-  // }
-  //
-  // if (rating) {
-  //   products = productDatabase.slice(40, 50);
-  // }
-  //
-  // if (q) {
-  //   products = productDatabase.slice(50, 60);
-  // }
-  //
-  // if (category) {
-  //   products = productDatabase.slice(60, 70);
-  // }
-  //
-  // if (sort) {
-  //   products = productDatabase.slice(70, 80);
-  // }
+  return response.data[0];
 
-  return {
-    products,
-    pageCount: 1,
-    totalProducts: products.length,
-    firstIndex: 0,
-    lastIndex: 9
-  };
 });
