@@ -58,7 +58,7 @@ export default function ProductFilters({
     }
       {/*<H6 mb={2}>Price Range</H6>
 
-      <Slider min={0} max={30} size="small" value={prices} valueLabelDisplay="auto" valueLabelFormat={v => `$${v}`} onChange={(_, v) => handleChangePrice(v)} />
+      <Slider min={0} max={30} size="small" value={prices} valueLabelDisplay="uto" valueLabelFormat={v => `$${v}`} onChange={(_, v) => handleChangePrice(v)} />
       <FlexBetween>
         <TextField fullWidth size="small" type="number" placeholder="0" value={prices[0]} onChange={e => handleChangePrice([+e.target.value, prices[1]])} />
 
