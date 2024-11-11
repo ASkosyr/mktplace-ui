@@ -26,7 +26,9 @@ export default function ProductFilters({
   } = filters;
   const {
     rating,
-    tags
+    tags,
+      handleChangeSearchParams,
+      handleChangeRating
   } = useProductFilterCard();
 
     console.log("tagsFacet:" + JSON.stringify(tagsFacet));
@@ -35,14 +37,18 @@ export default function ProductFilters({
       {
       /* CATEGORY VARIANT FILTER */
     }
-      {/*<H6 mb={1.25}>Categories</H6>
-      {categoryFacet.map(item => <Fragment key={item._id}><Span>{item._id}</Span>(<Span>{item.count}</Span>)</Fragment> )}
+      <H6 mb={1.25}>Categories</H6>
+      {categoryFacet.map(item => <Fragment key={item._id}>
 
-      <Box component={Divider} my={3} />*/}
+          <Span onClick={() => handleChangeSearchParams("category", item._id.toString())}>{item._id}</Span>(<Span>{item.count}</Span>)
+
+          </Fragment> )}
+
+      <Box component={Divider} my={3} />
 
       <H6 mb={1.25}>Tags</H6>
       {tagsFacet.map(item => (
-          <Chip label={item._id} variant="outlined"/>
+          <Chip label={item._id} variant="outlined" onClick={() => handleChangeSearchParams("tags", item._id.toString())}/>
       ))}
 
       <Box component={Divider} my={3} />
@@ -92,10 +98,12 @@ export default function ProductFilters({
 
       {
       /* RATINGS FILTER */
-    }
+      }
       <H6 mb={2}>Ratings</H6>
       <FormGroup>
-        {[5, 4, 3, 2, 1].map(item => <CheckboxLabel key={item} checked={rating === item} onChange={() => handleChangeSearchParams("rating", item.toString())} label={<Rating size="small" value={item} color="warn" readOnly />} />)}
+        {[5, 4, 3, 2, 1].map(item => <CheckboxLabel key={item} checked={rating === item}
+             onChange={() => handleChangeSearchParams("rating", item.toString())}
+             label={<Rating size="small" value={item} color="warn" readOnly />} />)}
       </FormGroup>
 
       <Box component={Divider} my={3} />

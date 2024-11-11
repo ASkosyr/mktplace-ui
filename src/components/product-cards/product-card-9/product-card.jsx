@@ -117,7 +117,7 @@ export default function ProductCard9(props) {
           {
           /* PRODUCT IMAGE / THUMBNAIL */
         }
-          <LazyImage src={imgUrl} alt={title} width={500} height={500} />
+          <img src={imgUrl} alt={title} width={150} height={150} />
         </div>
 
         <div className="content">

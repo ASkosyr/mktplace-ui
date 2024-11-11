@@ -14,8 +14,8 @@ export async function generateMetadata({
   const product = await api.getProduct(params.slug);
   if (!product) notFound();
   return {
-    title: product.title + " - AI Agents Marketplace",
-    description: "Bazaar is a React Next.js E-commerce template.",
+    title: product[0].title + " - AI Agents Marketplace",
+    description: product[0].longDescription,
     authors: [{
       name: "",
       url: ""
@@ -28,5 +28,5 @@ export default async function ProductDetails({
 }) {
   const [product, relatedProducts, frequentlyBought] = await Promise.all([api.getProduct(params.slug), getRelatedProducts(), getFrequentlyBought()]);
   if (!product) notFound();
-  return <ProductDetailsPageView product={product} relatedProducts={relatedProducts} frequentlyBought={frequentlyBought} />;
+  return <ProductDetailsPageView product={product[0]} relatedProducts={relatedProducts} frequentlyBought={frequentlyBought} />;
 }

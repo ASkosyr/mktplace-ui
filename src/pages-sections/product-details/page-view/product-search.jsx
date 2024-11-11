@@ -50,7 +50,7 @@ export default function ProductSearchPageView({
   const searchParams = useSearchParams();
   const query = searchParams.get("term");
   const page = searchParams.get("page") || "1";
-  const pageCount = Math.trunc(results.totalResults[0].total / 10);
+  const pageCount = Math.trunc(results.totalResults[0] ? (results.totalResults[0].total / 10) : 0);
 
   console.log("results111:" + JSON.stringify(results));
 
@@ -58,6 +58,7 @@ export default function ProductSearchPageView({
     if (!key || !value) return;
     const params = new URLSearchParams(searchParams);
     params.set(key, value);
+    console.log("new url:" + `${pathname}?${params.toString()}`);
     router.push(`${pathname}?${params.toString()}`);
   };
 
@@ -70,7 +71,7 @@ export default function ProductSearchPageView({
           {query ? <div>
               <H5 mb={0.5}>Searching for “{query}”</H5>
               <Paragraph color="grey.600">
-                {results.totalResults[0].total} results found
+                {results.totalResults[0] ? results.totalResults[0].total : 0} results found
               </Paragraph>
             </div> : <div />}
 
@@ -124,17 +125,17 @@ export default function ProductSearchPageView({
           {
           /* PRODUCT VIEW AREA */
         }
-          {/*{<Grid item xl={10} md={9} xs={12}>
+          {<Grid item xl={10} md={9} xs={12}>
             <ProductsListView products={results.results} />
 
             <FlexBetween flexWrap="wrap" mt={6}>
               <Span color="grey.600">
-                Showing {(page - 1) * 10 + 1}-{page * 10} of {results.totalResults[0].total} Agents
+                Showing {(page - 1) * 10 + 1}-{page * 10} of {results.totalResults[0] ? results.totalResults[0].total : 0} Agents
               </Span>
 
               <Pagination color="primary" variant="outlined" page={+page} count={pageCount} onChange={(_, page) => handleChangeSearchParams("page", page.toString())} />
             </FlexBetween>
-          </Grid>}*/}
+          </Grid>}
         </Grid>}
       </Container>
     </div>;

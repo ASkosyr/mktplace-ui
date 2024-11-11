@@ -6,12 +6,13 @@ export default function useProductFilterCard() {
   const searchParams = useSearchParams();
   const [collapsed, setCollapsed] = useState(true);
   const rating = JSON.parse(searchParams.get("rating") || "0");
-  const tags = JSON.parse(searchParams.get("tags") || "[]");
+  const tags = searchParams.get("tags") || "[]";
 
   const handleChangeSearchParams = (key, value) => {
     if (!key || !value) return;
     const params = new URLSearchParams(searchParams);
     params.set(key, value);
+    console.log("handleChangeSearchParams:" + JSON.stringify(pathname) + JSON.stringify(params.toString()));
     router.push(`${pathname}?${params.toString()}`);
   };
 
@@ -29,6 +30,7 @@ export default function useProductFilterCard() {
     collapsed,
     setCollapsed,
     handleChangeRating,
-    handleChangeTags
+    handleChangeTags,
+    handleChangeSearchParams
   };
 }

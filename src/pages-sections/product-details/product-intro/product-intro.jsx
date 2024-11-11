@@ -28,11 +28,13 @@ import {ImageWrapper} from "../../fashion-3/section-13/styles";
 export default function ProductIntro({
   product
 }) {
+  console.log("tags:" + product.tags);
+
   return <StyledRoot>
 
         <Grid item md={6} xs={12} alignItems="left">
             <ProductImageWrapper>
-                <Image alt="product" src={product.thumbnail} sizes="(100px 100px)" class="object-left" />
+                <img alt="product" src={product.thumbnail} width={100} height={100} class="object-left" />
             </ProductImageWrapper>
           {
           /* PRODUCT NAME */
@@ -60,7 +62,7 @@ export default function ProductIntro({
         }
           {/*<ProductVariantSelector />*/}
 
-          {product.tags.split(',').map(tag => <Chip label={tag} variant="outlined"/>)}
+          {/*{product.tags.split(',').map(tag => <Chip label={tag} variant="outlined"/>)}*/}
 
           {
           /* PRICE & STOCK */
