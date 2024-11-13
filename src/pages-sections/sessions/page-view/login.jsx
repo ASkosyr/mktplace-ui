@@ -44,7 +44,7 @@ export default function LoginPageView() {
     }
   });
   return <form onSubmit={handleSubmit}>
-      <BazaarTextField mb={1.5} fullWidth name="email" size="small" type="email" variant="outlined" onBlur={handleBlur} value={values.email} onChange={handleChange} label="Email or Phone Number" placeholder="exmple@mail.com" helperText={touched.email && errors.email} error={Boolean(touched.email && errors.email)} />
+      <BazaarTextField mb={1.5} fullWidth name="email" size="small" type="email" variant="outlined" onBlur={handleBlur} value={values.email} onChange={handleChange} label="Email" placeholder="exmple@mail.com" helperText={touched.email && errors.email} error={Boolean(touched.email && errors.email)} />
 
       <BazaarTextField mb={2} fullWidth size="small" name="password" label="Password" autoComplete="on" variant="outlined" onBlur={handleBlur} onChange={handleChange} value={values.password} placeholder="*********" type={visiblePassword ? "text" : "password"} helperText={touched.password && errors.password} error={Boolean(touched.password && errors.password)} InputProps={{
       endAdornment: <EyeToggleButton show={visiblePassword} click={togglePasswordVisible} />

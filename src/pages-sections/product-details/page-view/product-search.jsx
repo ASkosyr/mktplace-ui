@@ -22,7 +22,8 @@ import { H5, Paragraph, Span } from "components/Typography";
 import { FlexBetween, FlexBox } from "components/flex-box";
 import ProductFilters from "components/products-view/filters";
 import ProductsGridView from "components/products-view/products-grid-view";
-import ProductsListView from "components/products-view/products-list-view"; 
+import ProductsListView from "components/products-view/products-list-view";
+import SelectedSearchParams from "./search-params";
 // TYPES
 
 const SORT_OPTIONS = [{
@@ -51,8 +52,6 @@ export default function ProductSearchPageView({
   const query = searchParams.get("term");
   const page = searchParams.get("page") || "1";
   const pageCount = Math.trunc(results.totalResults[0] ? (results.totalResults[0].total / 10) : 0);
-
-  console.log("results111:" + JSON.stringify(results));
 
   const handleChangeSearchParams = (key, value) => {
     if (!key || !value) return;
@@ -103,6 +102,8 @@ export default function ProductSearchPageView({
                       <FilterList fontSize="small" />
                     </IconButton>}>
                   <Box px={3} py={2}>
+                    <SelectedSearchParams />
+
                     <ProductFilters filters={results} />
                   </Box>
                 </Sidenav>
@@ -119,6 +120,8 @@ export default function ProductSearchPageView({
             xs: "none"
           }
         }}>
+            <SelectedSearchParams />
+
             <ProductFilters filters={results} />
           </Grid>
 

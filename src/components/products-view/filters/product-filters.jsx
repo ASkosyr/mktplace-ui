@@ -48,7 +48,12 @@ export default function ProductFilters({
 
       <H6 mb={1.25}>Tags</H6>
       {tagsFacet.map(item => (
-          <Chip label={item._id} variant="outlined" onClick={() => handleChangeSearchParams("tags", item._id.toString())}/>
+          <Chip
+              label={item._id}
+              variant="outlined"
+              onClick={() => handleChangeSearchParams("tags", item._id.toString())}
+              sx={{ backgroundColor: 'gray', color: 'white', margin: '4px' }}
+          />
       ))}
 
       <Box component={Divider} my={3} />
